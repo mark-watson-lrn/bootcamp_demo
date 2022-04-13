@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title>Learnosity Bootcamp - Quiz</title>
+  </head>
+  <body>
+    <h1>Protein Quiz</h1>
+    <div id="learnosity_assess"></div>
+
+    <script src="//items.learnosity.com/?v2021.2.LTS"></script>
+    <script>
+      const request = <%- JSON.stringify(request) %>;
+      const itemsApp = LearnosityItems.init(request, {
+          readyListener() {
+              console.log('ready');
+          },
+          errorListener(err) {
+              console.log('error', err);
+          }
+      })
+    </script>
+  </body>
+</html>
