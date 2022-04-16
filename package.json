@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Mark Watson",
   "license": "MIT",
-  "description": "An exploration into the application of Learnosity's different API's",
+  "description": "An exploration into the application of Learnosity's different API's.",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
