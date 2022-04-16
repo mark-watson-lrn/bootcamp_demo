@@ -1,0 +1,16 @@
+html,
+body {
+  height: 80vh;
+  width: 80vw;
+  margin: 0.5rem;
+  padding: 1rem 2.5rem;
+  background-color: rgb(200, 155, 90);
+}
+
+#learnosity_assess{
+    height: 90%;
+    width: 100%;
+    background-color: rgb(220, 165, 95);
+    overflow-y: scroll;
+    
+}
