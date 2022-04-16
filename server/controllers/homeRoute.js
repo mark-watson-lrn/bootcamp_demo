@@ -11,9 +11,8 @@ const session_id = uuid.v4();
 
 let domain = "localhost";
 if (process.env.NODE_ENV === "production") {
-  domain = "*";
+  domain = "proteins-lrn.herokuapp.com";
 } 
-
 
 router.get("/", async (req, res) => {
   try {
