@@ -125,7 +125,6 @@ You are welcome to modify the code as you need as allowed by the [license](#7-li
 [x]  Application loads with no errors.  
 [x]  User experience is intuitive and easy to navigate.  
 [x]  User interface style is clean and polished.  
-[x]  Application resembles the mock-up functionality provided by Blowfish Studios.  
 [x]  GitHub repository contains application code.
 [x]  Application is deployed to GitHub Pages: [Github location: https://github.com/mark-watson-lrn/bootcamp_demo](https://github.com/mark-watson-lrn/bootcamp_demo)  
 [x]  Repository has a unique name.  
