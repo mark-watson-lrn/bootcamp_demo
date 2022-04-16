@@ -8,8 +8,11 @@ const uuid = require("uuid"); // Load the UUID library
 // Generate the user ID and session ID as UUIDs, set the web server domain.
 const user_id = uuid.v4();
 const session_id = uuid.v4();
-// const domain = "localhost";
-const domain = "herokuapp.com";
+
+let domain = "localhost";
+if (process.env.NODE_ENV === "production") {
+  domain = "*";
+} 
 
 
 router.get("/", async (req, res) => {
