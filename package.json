@@ -6,7 +6,7 @@
   "description": "An exploration into the application of Learnosity's different API's.",
   "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "cd server && node server.js",
     "develop": "cd server && npm run watch",
     "install": "cd server && npm i"
   },
