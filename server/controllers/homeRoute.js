@@ -2,13 +2,15 @@ const router = require("express").Router();
 const Learnosity = require("learnosity-sdk-nodejs/index"); // Include Learnosity SDK constructor
 const uuid = require("uuid"); // Load the UUID library
 
+
 // - - - - - - Learnosity server-side configuration - - - - - - //
 
 // Generate the user ID and session ID as UUIDs, set the web server domain.
 const user_id = uuid.v4();
 const session_id = uuid.v4();
-const domain = "localhost";
-//const domain = 'proteins-lrn.herokuapp.com';
+// const domain = "localhost";
+const domain = "herokuapp.com";
+
 
 router.get("/", async (req, res) => {
   try {
