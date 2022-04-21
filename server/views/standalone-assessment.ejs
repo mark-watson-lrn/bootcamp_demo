@@ -11,13 +11,19 @@
   <body>
     <div id="heading"><h1>Protein Quiz</h1></div>
 
-    <div id="quiz-container"> 
-    <div id="learnosity_assess"></div>
-  </div>
+    <div id="quiz-container">
+      <div id="learnosity_assess"></div>
+    </div>
 
     <script src="//items.learnosity.com/?v2021.2.LTS"></script>
     <script>
       const request = <%- JSON.stringify(request) %>;
+
+      console.log("signature: ",request.security.signature);
+
+      const items = [request.security.signature, request.security.timestamp];
+      localStorage.setItem("identifier", JSON.stringify(items));
+
       const itemsApp = LearnosityItems.init(request, {
           readyListener() {
               console.log('ready');
@@ -26,9 +32,6 @@
               console.log('error', err);
           }
       })
-
-      const user = request.request.user_id;
-      console.log("User ID: ", user);
     </script>
   </body>
 </html>

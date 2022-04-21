@@ -14,12 +14,18 @@ if (process.env.NODE_ENV === "production") {
   domain = "proteins-lrn.herokuapp.com";
 } 
 
+const user_logged_in = `/reports?user_id=${user_id}&session_id=${session_id}`;
+
 router.get("/", async (req, res) => {
   try {
-    const learnositySdk = new Learnosity(); // Instantiate the SDK
+    // Instantiate the SDK
+    const learnositySdk = new Learnosity(); 
+
     // Items API configuration parameters.
     const request = await learnositySdk.init(
-      "items", // Select Items API
+
+      // Select Items API
+      "items", 
       // Consumer key and consumer secret are the public & private security keys required to access Learnosity APIs and data.
       // These keys grant access to Learnosity's public demos account. Learnosity will provide keys for your own account.
       {
@@ -54,7 +60,12 @@ router.get("/", async (req, res) => {
         name: "binoy and watson Learnosity Bootcamp Demo",
         // Can be set to `initial, `resume` or `review`. Optional. Default = `initial`.
         state: "initial",
+        config: {
+          configuration: {
+            "onsubmit_redirect_url": user_logged_in
+          }
       }
+    }
     );
 
     // EJS - Render the page and request /views/standalone.
