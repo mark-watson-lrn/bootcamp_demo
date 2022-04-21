@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Learnosity Bootcamp - Quiz</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
   </head>
-  <body><div id="heading"> <h1>Protein Quiz</h1></div>
-   
-    
+  <body>
+    <div id="heading"><h1>Protein Quiz</h1></div>
+
     <div id="learnosity_assess"></div>
 
     <script src="//items.learnosity.com/?v2021.2.LTS"></script>
@@ -25,6 +24,9 @@
               console.log('error', err);
           }
       })
+
+      const user = request.request.user_id;
+      console.log("User ID: ", user);
     </script>
   </body>
 </html>
