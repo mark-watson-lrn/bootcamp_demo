@@ -39,17 +39,16 @@ router.get("/", async (req, res) => {
 
         // A reference of the Activity to retrieve from the Item bank, defining which
         // Items will be served in this assessment.
-        // quickstart_examples_activity_template_001
-        // b149b179-3f3e-43d7-8c0b-bc06c752d9cf
         activity_template_id: "lrn-bootcamp-binoy-watson",
-        // Selects a rendering mode, `assess` type is a "standalone" mode (loading a complete
-        // assessment player for navigation, VS `inline`, for embedded).
+
         // Uniquely identifies this specific assessment attempt session for  save/resume, data
         // retrieval and reporting purposes. A UUID generated on line 18.
         session_id: session_id,
+
         // Used in data retrieval and reporting to compare results with other users
         // submitting the same assessment.
         activity_id: "lrn-bootcamp-binoy-watson_001",
+
         // Selects a rendering mode, `assess` type is a "standalone" mode (loading a complete
         // assessment player for navigation, VS `inline`, for embedded).
         rendering_type: "assess",

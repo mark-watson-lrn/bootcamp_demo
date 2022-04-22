@@ -19,11 +19,6 @@
     <script>
       const request = <%- JSON.stringify(request) %>;
 
-      console.log("signature: ",request.security.signature);
-
-      const items = [request.security.signature, request.security.timestamp];
-      localStorage.setItem("identifier", JSON.stringify(items));
-
       const itemsApp = LearnosityItems.init(request, {
           readyListener() {
               console.log('ready');

@@ -17,23 +17,11 @@
     <script src="https://reports.learnosity.com/?v2022.1.LTS"></script>
     <script>
 
-            const request = <%- JSON.stringify(request) %>;
-
-            const itemsRetrieved = JSON.parse(localStorage.getItem('identifier'));
-
-            const signature = itemsRetrieved[0];
-            const timestamp = itemsRetrieved[1];
-
-            request.security.signature = signature;
-            request.security.timestamp = timestamp;          
-
-            //console.log(request);
-            console.log("Security configured domain:  ",request.security.domain);
-            console.log("Actual Domain:  ",location.hostname);
-
+            const request = <%- JSON.stringify(request) %>;        
             const callbacks = {
                 errorListener: function (e) {
-                    // Adds a listener to all error codes.
+                    
+                  // Adds a listener to all error codes.
                     console.log("Error Code ", e.code);
                     console.log("Error Message ", e.msg);
                     console.log("Error Detail ", e.detail);
